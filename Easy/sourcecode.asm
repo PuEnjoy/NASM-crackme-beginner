@@ -1,10 +1,3 @@
-section .data
-inputmsg: db "Enter the code: ", 10
-inputmsglen: equ $ - inputmsg
-secret: db "Ronja"
-wrongmsg: db "WORNG!", 10
-correctmsg: db "CORRECT!", 10
-
 section .bss
 inbuffer: resw 1
 
@@ -48,3 +41,10 @@ _exit:
 mov rax, 60
 mov rdi, 0
 syscall
+
+section .data
+inputmsg: db "Enter the code: ", 10
+inputmsglen: equ $ - inputmsg
+secret: db "Ronja"
+wrongmsg: db "WORNG!", 10
+correctmsg: db "CORRECT!", 10
